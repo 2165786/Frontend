@@ -1,0 +1,73 @@
+// Layout components which are repeated on each page
+
+html,
+body {
+    margin: 0; 
+    min-width: @min;  /* het voorkomt dat de pagina te smal wordt */
+    overflow-x: hidden; /* het verbergt horizontaal scrollen */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body  {
+    background-color: @bg; /* achtergrondkleur voor de pagina */
+}
+
+.nav-wrapper {
+    width: 100%;
+    .flex-center;
+    height: 80px;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        max-width: 350px;
+        justify-content: space-between;
+    
+        a {
+            text-decoration: none;
+            font-size: 1.1rem; /* iets grotere tekstgrootte */
+            color: rgb(156, 154, 154);
+            transition: all 0.5s ease-in-out; /* het zorgt ervoor dat de kleur van de links geleidelijk verandert, bijvoorbeeld als je er met je muis overheen gaat. */
+    
+            &.active,
+            &:hover {
+                color: white;   /* de link wordt wit bij hover */
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: lighten(@bg, 10%); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; 
+
+    .footer-content {
+        max-width: 1200px; 
+        margin: 0 auto; 
+        
+        .footer-nav {
+            margin-top: 10px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 1rem;
+
+                &:hover {
+                    text-decoration: underline; 
+                }
+            }
+        }
+    }
+}

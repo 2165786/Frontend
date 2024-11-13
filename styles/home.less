@@ -1,0 +1,23 @@
+// Homepage component
+@import "./globals.less";
+
+.banner {
+    margin-top: -80px; /* schuift de banner omhoog om ruimte te maken voor de navbar. */
+    position: relative; /* het is nodig om de z index te gebruiken, zodat je het element op de juiste laag kunt zetten. */
+    z-index: 0;
+    width: 100%;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: @overlay;
+    }
+
+    img {
+        width: 100%;
+        z-index: -10;
+    }    
+}

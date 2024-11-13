@@ -1,0 +1,46 @@
+// Vestigingen component
+@import "./globals.less";
+
+.vestiging-blokken {
+    display: grid;
+    margin-top: 100px;
+    gap: 50px;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 50px;
+
+    .screen-md() {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .screen-sm() {
+        grid-template-columns: 1fr !important;
+        padding: 0 10px;
+    }
+
+    .vestiging {
+        border: 1px solid rgba(128, 128, 128, 0.354);
+        color: white;
+        background-color: @secondary;
+
+        img {
+            width: 100%;
+        }
+
+        .vestiging-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+
+            h2 {
+                margin: 0;
+            }
+        
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

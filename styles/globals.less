@@ -1,0 +1,33 @@
+// Global functions, variables and definitions
+
+// Standaard kleuren
+@bg:#1f212a;
+@overlay: #00000060;
+@primary: #46494b;
+@secondary: #252836; 
+
+// Standard screen sizes
+@min: 300px;
+@sm: 500px;
+@md: 992px;
+
+
+
+// Standard screen functions
+.screen-sm() {
+    @media only screen and (max-width: @sm) {
+        @arguments();
+    }
+}
+
+.screen-md() {
+    @media only screen and (max-width: @md) {
+        @arguments();
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
